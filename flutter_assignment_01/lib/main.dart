@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import './textControl.dart';
 import './textPlacement.dart';
-//1. flutter app DONE
-//2. app met een appbar, text erin, text in textveld eronder
-//3. knop eronder, als klik op knop dan veranderd de tekst.
-//NOTE: splot om 3 widget,  app, textcontrol en text
 
 void main() {
   runApp(MyApp());
