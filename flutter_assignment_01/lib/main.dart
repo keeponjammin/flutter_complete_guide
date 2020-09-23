@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './textControl.dart';
-import './textPlacement.dart';
+import './text_Control.dart';
+import './text_placement.dart';
 
 void main() {
   runApp(MyApp());
