@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
+
 import './transaction.dart';
 
 void main() => runApp(MyApp());
@@ -24,7 +26,7 @@ class MyHomePage extends StatelessWidget {
     Transaction(
       id: 't2',
       title: 'Nintendo Switch',
-      amount: 123.66,
+      amount: 12.66,
       date: DateTime.now(),
     ),
   ];
@@ -36,9 +38,9 @@ class MyHomePage extends StatelessWidget {
         title: Text('Super Sexy Expenses App'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        // mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: <Widget>[
+        children: [
           Container(
             width: double.infinity,
             child: Card(
@@ -47,11 +49,37 @@ class MyHomePage extends StatelessWidget {
               elevation: 5,
             ),
           ),
+          Card(
+            elevation: 5,
+            child: Container(
+              padding: EdgeInsets.all(10),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Title',
+                    ),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      labelText: 'Amount',
+                    ),
+                  ),
+                  FlatButton(
+                    child: Text('Add Transaction'),
+                    onPressed: () {},
+                    textColor: Colors.purple,
+                  ),
+                ],
+              ),
+            ),
+          ),
           Column(
             children: transactions.map((tx) {
               return Card(
                 child: Row(
-                  children: <Widget>[
+                  children: [
                     Container(
                       margin: EdgeInsets.symmetric(
                         vertical: 10,
@@ -65,7 +93,7 @@ class MyHomePage extends StatelessWidget {
                       ),
                       padding: EdgeInsets.all(10),
                       child: Text(
-                        tx.amount.toString(),
+                        '€${tx.amount}',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 20,
@@ -74,19 +102,18 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ),
                     Column(
-                      //mainAxisAlignment: MainAxisAlignment.start,
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
+                      children: [
                         Text(
                           tx.title,
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            fontSize: 18,
+                            fontSize: 16,
                             //color: Colors.blue,
                           ),
                         ),
                         Text(
-                          tx.date.toString(),
+                          DateFormat.yMMMMEEEEd().format(tx.date),
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 10,
