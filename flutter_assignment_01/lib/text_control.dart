@@ -10,7 +10,7 @@ class TextControl extends StatelessWidget {
     return RaisedButton(
       color: Colors.blue,
       textColor: Colors.white,
-      child: Text('Click me!'),
+      child: const Text('Click me!'),
       onPressed: updateText,
     );
   }

@@ -28,7 +28,7 @@ class Result extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           FlatButton(
-            child: Text('Herstart Quiz!'),
+            child: const Text('Herstart Quiz!'),
             textColor: Colors.blue,
             onPressed: resetHandler,
           ),

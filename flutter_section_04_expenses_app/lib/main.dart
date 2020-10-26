@@ -98,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
     final isLandScape = mediaQuery.orientation == Orientation.landscape;
     final PreferredSizeWidget appBar = Platform.isIOS
         ? CupertinoNavigationBar(
-            middle: Text(
+            middle: const Text(
               'Money Making Man',
             ),
             trailing: Row(
@@ -112,7 +112,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           )
         : AppBar(
-            title: Text(
+            title: const Text(
               'Money Making Man',
             ),
             actions: [
