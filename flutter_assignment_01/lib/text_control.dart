@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class TextControl extends StatelessWidget {
   final String containerText;
   final Function updateText;
-  TextControl({@required this.updateText, @required this.containerText});
+  const TextControl({@required this.updateText, @required this.containerText});
 
   @override
   Widget build(BuildContext context) {

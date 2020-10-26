@@ -4,7 +4,7 @@ class Result extends StatelessWidget {
   final int resultScore;
   final Function resetHandler;
 
-  Result(this.resultScore, this.resetHandler);
+  const Result(this.resultScore, this.resetHandler);
 
   String get resultPhrase {
     var resultText = 'Goed gedaan!';

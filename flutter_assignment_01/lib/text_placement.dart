@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 //container with text. stateless.
 class TextPlacement extends StatelessWidget {
   final String containerText;
-  TextPlacement({@required this.containerText});
+  const TextPlacement({@required this.containerText});
 
   @override
   Widget build(BuildContext context) {
